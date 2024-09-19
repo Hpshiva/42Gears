@@ -7,35 +7,57 @@ body,
 html {
   height: 100vh;
   width: 100vw;
-  background-color: rgb(255, 228, 228);
+  /* background-color: rgb(255, 228, 228); */
 }
-/* header {
-  height: 10%;
-  background-color: #01848e;
-}
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.p-3 {
-  padding: 10px 25px;
-}
-.gap {
-  gap: 5;
-} */
+
 li {
   list-style-type: none;
 }
 .bg-blue {
   background-color: #01848e;
 }
-.scroll {
-  overflow-x: auto !important;
-}
-.card {
-  height: 100vh !important;
-}
+
 .tab-card {
   border: 0px solid #000 !important;
+}
+.vh-100 {
+  height: 100vh !important;
+}
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable tfoot th,
+table.dataTable tfoot td,
+td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+  text-align: left !important;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order {
+  display: none !important;
+}
+.accordion-body {
+  text-align: end;
+}
+.btn-main {
+  border-radius: 0% !important;
+  border-bottom: 0.8px solid #01848e !important;
+  border-top-left-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+  color: #01848e !important;
+  background-color: #d9edee !important;
+}
+.btn-main2 {
+  color: white !important;
+  background-color: #47c2bf !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: unset !important;
+}
+@media (min-width: 320px) and (max-width: 1200px) {
+  .scroll {
+    overflow-x: auto !important;
+  }
+}
+.fs-30 {
+  font-size: 22px;
 }
