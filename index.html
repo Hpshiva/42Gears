@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.6/css/dataTables.bootstrap5.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.6/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.6/js/dataTables.bootstrap5.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-blue">
+        <div class="container-fluid py-3 px-4">
+          <a class="navbar-brand text-white">Branding</a>
+          <div>
+            <ul class="d-flex gap-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                >
+                  <i class="fa-regular fa-message"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <i class="fa-regular fa-bell"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <i class="fa-solid fa-gear"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <div class="row">
+        <!-- Accordion Section -->
+        <div class="col-md-12 col-lg-2">
+          <div class="shadow h-100">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <button
+                      class="btn btn-primary mb-2"
+                      id="btn-home"
+                      type="button"
+                    >
+                      Go to Home Tab
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <button
+                      class="btn btn-secondary mb-2"
+                      id="btn-profile"
+                      type="button"
+                    >
+                      Go to Profile Tab
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <button
+                      class="btn btn-info mb-2"
+                      id="btn-messages"
+                      type="button"
+                    >
+                      Go to Messages Tab
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="col-md-12 col-lg-10">
+          <div class="card shadow">
+            <div
+              class="nav flex-column nav-pills me-3 d-none"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <button
+                class="nav-link active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-home"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+              >
+                Home
+              </button>
+              <button
+                class="nav-link"
+                id="v-pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+              >
+                Profile
+              </button>
+              <button
+                class="nav-link"
+                id="v-pills-messages-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-messages"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-messages"
+                aria-selected="false"
+              >
+                Messages
+              </button>
+              <button
+                class="nav-link"
+                id="v-pills-settings-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-settings"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="false"
+              >
+                Settings
+              </button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="v-pills-home"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+                tabindex="0"
+              >
+                <section class="py-5 px-2">
+                  <div class="card tab-card p-3">
+                    <div class="tab-content scroll" id="pills-tabContent">
+                      <table id="example" class="table border custom-border">
+                        <thead>
+                          <tr class="custom-row">
+                            <th scope="col first-col">
+                              <div>
+                                <input
+                                  class="form-check-input px-2 py-2"
+                                  type="checkbox"
+                                  id="checkboxNoLabel"
+                                  value=""
+                                  aria-label="..."
+                                />
+                              </div>
+                            </th>
+                            <th scope="col text-start">Sl.No</th>
+                            <th scope="col">Account Roles</th>
+                            <th scope="col">Permissions</th>
+                            <th scope="col">No. of Members</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="custom-row">
+                            <th scope="row">
+                              <div>
+                                <input
+                                  class="form-check-input px-2 py-2"
+                                  type="checkbox"
+                                  id="checkboxNoLabel"
+                                  value=""
+                                  aria-label="..."
+                                />
+                              </div>
+                            </th>
+                            <td>01</td>
+                            <td>Admin</td>
+                            <td>
+                              <button class="btn btn-primary rounded-pill">
+                                <span>Manage</span>
+                              </button>
+                            </td>
+                            <td>00</td>
+
+                            <td>
+                              <div class="action d-flex">
+                                <div class="bin">
+                                  <i
+                                    class="fa-solid fa-trash-can"
+                                    style="color: #667085"
+                                  ></i>
+                                </div>
+                                <div class="edit">
+                                  <i
+                                    class="fa-solid fa-pen"
+                                    style="color: #667085"
+                                  ></i>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="v-pills-profile"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+                tabindex="0"
+              >
+                This is Profile tab content.
+              </div>
+              <div
+                class="tab-pane fade"
+                id="v-pills-messages"
+                role="tabpanel"
+                aria-labelledby="v-pills-messages-tab"
+                tabindex="0"
+              >
+                This is Messages tab content.
+              </div>
+              <div
+                class="tab-pane fade"
+                id="v-pills-settings"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab"
+                tabindex="0"
+              >
+                This is Settings tab content.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Switch to Home Tab
+      document
+        .getElementById("btn-home")
+        .addEventListener("click", function () {
+          var homeTab = new bootstrap.Tab(
+            document.getElementById("v-pills-home-tab")
+          );
+          homeTab.show();
+        });
+
+      // Switch to Profile Tab
+      document
+        .getElementById("btn-profile")
+        .addEventListener("click", function () {
+          var profileTab = new bootstrap.Tab(
+            document.getElementById("v-pills-profile-tab")
+          );
+          profileTab.show();
+        });
+
+      // Switch to Messages Tab
+      document
+        .getElementById("btn-messages")
+        .addEventListener("click", function () {
+          var messagesTab = new bootstrap.Tab(
+            document.getElementById("v-pills-messages-tab")
+          );
+          messagesTab.show();
+        });
+    </script>
+  </body>
+  <script>
+    $("#example").DataTable();
+  </script>
+</html>

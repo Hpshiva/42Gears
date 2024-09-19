@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 228, 228);
+}
+/* header {
+  height: 10%;
+  background-color: #01848e;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-3 {
+  padding: 10px 25px;
+}
+.gap {
+  gap: 5;
+} */
+li {
+  list-style-type: none;
+}
+.bg-blue {
+  background-color: #01848e;
+}
+.scroll {
+  overflow-x: auto !important;
+}
+.card {
+  height: 100vh !important;
+}
+.tab-card {
+  border: 0px solid #000 !important;
+}
