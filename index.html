@@ -351,7 +351,70 @@
                   aria-labelledby="v-pills-profile-tab"
                   tabindex="0"
                 >
-                  This is Profile tab content.
+                  <section class="pb-5 px-2">
+                    <div class="card tab-card p-3 rounded-3">
+                      <div class="row py-3 align-items-center">
+                        <div class="col">
+                          <h3>Lorem Ipsum</h3>
+                        </div>
+                        <div class="col">
+                          <div class="d-flex justify-content-end gap-3">
+                            <button class="btn btn-main2 px-4 py-2 border-3">
+                              Button
+                            </button>
+                            <div class="text-center d-none d-md-block">
+                              <p class="m-0">
+                                <i class="fa-solid fa-rotate"></i>
+                              </p>
+                              <p class="m-0">Refresh</p>
+                            </div>
+                            <div class="text-center d-none d-md-block">
+                              <p class="m-0">
+                                <i class="fa-solid fa-pen"></i>
+                              </p>
+                              <p class="m-0">Edit</p>
+                            </div>
+                            <div class="text-center d-none d-md-block">
+                              <p class="m-0">
+                                <i class="fa-solid fa-trash-can"></i>
+                              </p>
+                              <p class="m-0">Delete</p>
+                            </div>
+                            <div class="d-md-none">
+                              <p class="m-0 text-center">
+                                <i class="fa-solid fa-ellipsis"></i>
+                              </p>
+                              <p class="m-0">More</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr />
+                      <div class="tab-content scroll" id="pills-tabContent">
+                        <table id="example1" class="table border custom-border">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="col-2">ID No.</th>
+                              <th scope="col" class="col-2">Name</th>
+                              <th scope="col" class="col-2">Email</th>
+                              <th scope="col" class="col-2">Date</th>
+                              <th scope="col" class="col-2">Tags</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>123456</td>
+                              <td>lorem Ipsum</td>
+                              <td>Loremipsum@email.com</td>
+                              <td>01-01-2024</td>
+                              <td>lorem Ipsum</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </section>
                 </div>
                 <div
                   class="tab-pane fade"
@@ -360,7 +423,70 @@
                   aria-labelledby="v-pills-messages-tab"
                   tabindex="0"
                 >
-                  This is Messages tab content.
+                  <section class="pb-5 px-2">
+                    <div class="card tab-card p-3 rounded-3">
+                      <div class="row py-3 align-items-center">
+                        <div class="col">
+                          <h3>Lorem Ipsum</h3>
+                        </div>
+                        <div class="col">
+                          <div class="d-flex justify-content-end gap-3">
+                            <button class="btn btn-main2 px-4 py-2 border-3">
+                              Button
+                            </button>
+                            <div class="text-center d-none d-md-block">
+                              <p class="m-0">
+                                <i class="fa-solid fa-rotate"></i>
+                              </p>
+                              <p class="m-0">Refresh</p>
+                            </div>
+                            <div class="text-center d-none d-md-block">
+                              <p class="m-0">
+                                <i class="fa-solid fa-pen"></i>
+                              </p>
+                              <p class="m-0">Edit</p>
+                            </div>
+                            <div class="text-center d-none d-md-block">
+                              <p class="m-0">
+                                <i class="fa-solid fa-trash-can"></i>
+                              </p>
+                              <p class="m-0">Delete</p>
+                            </div>
+                            <div class="d-md-none">
+                              <p class="m-0 text-center">
+                                <i class="fa-solid fa-ellipsis"></i>
+                              </p>
+                              <p class="m-0">More</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr />
+                      <div class="tab-content scroll" id="pills-tabContent">
+                        <table id="example2" class="table border custom-border">
+                          <thead>
+                            <tr>
+                              <th scope="col" class="col-2">ID No.</th>
+                              <th scope="col" class="col-2">Name</th>
+                              <th scope="col" class="col-2">Email</th>
+                              <th scope="col" class="col-2">Date</th>
+                              <th scope="col" class="col-2">Tags</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>123456</td>
+                              <td>lorem Ipsum</td>
+                              <td>Loremipsum@email.com</td>
+                              <td>01-01-2024</td>
+                              <td>lorem Ipsum</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </section>
                 </div>
                 <div
                   class="tab-pane fade"
@@ -377,7 +503,11 @@
         </div>
       </div>
     </section>
-
+    <script>
+      $("#example").DataTable();
+      $("#example1").DataTable();
+      $("#example2").DataTable();
+    </script>
     <script>
       // Switch to Home Tab
       document
@@ -410,34 +540,40 @@
         });
     </script>
   </body>
+
   <script>
-    $("#example").DataTable();
-  </script>
-  <script>
-    // Load JSON data from the 'data' folder and populate the table
+    // Load JSON data from the 'data' folder and populate the tables
     $(document).ready(function () {
       $.getJSON("data/data.json", function (data) {
-        var table = $("#example").DataTable();
-        table.clear();
+        // Function to populate a DataTable
+        function populateTable(tableId) {
+          var table = $(tableId).DataTable();
+          table.clear();
 
-        // Iterate over JSON data and add rows to the table
-        data.forEach(function (item) {
-          // Create a string of span elements for the tags
-          var tagsHtml = item.tags
-            .map(function (tag) {
-              return (
-                '<span class="btn btn-primary mb-1 btn-main2">' +
-                tag +
-                "</span>"
-              );
-            })
-            .join(" ");
+          // Iterate over JSON data and add rows to the table
+          data.forEach(function (item) {
+            // Create a string of span elements for the tags
+            var tagsHtml = item.tags
+              .map(function (tag) {
+                return (
+                  '<span class="btn btn-primary mb-1 btn-main2">' +
+                  tag +
+                  "</span>"
+                );
+              })
+              .join(" ");
 
-          // Add the row with the tags as HTML
-          table.row
-            .add([item.id, item.name, item.email, item.date, tagsHtml])
-            .draw();
-        });
+            // Add the row with the tags as HTML
+            table.row
+              .add([item.id, item.name, item.email, item.date, tagsHtml])
+              .draw();
+          });
+        }
+
+        // Populate both tables
+        populateTable("#example");
+        populateTable("#example1");
+        populateTable("#example2");
       });
     });
   </script>
