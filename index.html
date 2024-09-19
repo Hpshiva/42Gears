@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pixel-Perfet UI</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -37,7 +37,7 @@
     <header>
       <nav class="navbar bg-blue">
         <div class="container-fluid py-3 px-4">
-          <a class="navbar-brand text-white">Branding</a>
+          <a class="navbar-brand text-white"> <h2>Branding</h2></a>
           <div>
             <ul class="d-flex gap-3">
               <li class="nav-item">
@@ -46,17 +46,17 @@
                   aria-current="page"
                   href="#"
                 >
-                  <i class="fa-regular fa-message"></i>
+                  <i class="fa-regular fa-message fs-30"></i>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">
-                  <i class="fa-regular fa-bell"></i
+                  <i class="fa-regular fa-bell fs-30"></i
                 ></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">
-                  <i class="fa-solid fa-gear"></i
+                  <i class="fa-solid fa-gear fs-30"></i
                 ></a>
               </li>
             </ul>
@@ -69,7 +69,7 @@
       <div class="row">
         <!-- Accordion Section -->
         <div class="col-md-12 col-lg-2">
-          <div class="shadow h-100">
+          <div class="shadow vh-100">
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -89,13 +89,37 @@
                   class="accordion-collapse collapse show"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div
+                    class="accordion-body text-end p-0 mt-2 ps-0 ps-md-5 ps-lg-5"
+                  >
                     <button
-                      class="btn btn-primary mb-2"
+                      class="btn btn-main w-100"
                       id="btn-home"
                       type="button"
                     >
                       Go to Home Tab
+                    </button>
+                  </div>
+                  <div
+                    class="accordion-body text-end p-0 mt-2 ps-0 ps-md-5 ps-lg-5"
+                  >
+                    <button
+                      class="btn btn-main w-100"
+                      id="btn-profile"
+                      type="button"
+                    >
+                      Go to Profile Tab
+                    </button>
+                  </div>
+                  <div
+                    class="accordion-body text-end p-0 my-2 ps-0 ps-md-5 ps-lg-5"
+                  >
+                    <button
+                      class="btn btn-main w-100"
+                      id="btn-messages"
+                      type="button"
+                    >
+                      Go to Messages Tab
                     </button>
                   </div>
                 </div>
@@ -118,13 +142,11 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
-                    <button
-                      class="btn btn-secondary mb-2"
-                      id="btn-profile"
-                      type="button"
-                    >
-                      Go to Profile Tab
+                  <div
+                    class="accordion-body text-end p-0 my-2 ps-0 ps-md-5 ps-lg-5"
+                  >
+                    <button class="btn btn-main w-100" id="Dummy" type="button">
+                      lorem ipsum dummy
                     </button>
                   </div>
                 </div>
@@ -147,24 +169,42 @@
                   class="accordion-collapse collapse"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
-                    <button
-                      class="btn btn-info mb-2"
-                      id="btn-messages"
-                      type="button"
-                    >
-                      Go to Messages Tab
+                  <div
+                    class="accordion-body text-end p-0 my-2 ps-0 ps-md-5 ps-lg-5"
+                  >
+                    <button class="btn btn-main w-100" id="Dummy" type="button">
+                      lorem ipsum dummy
                     </button>
                   </div>
                 </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Accordion Item #4
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                ></div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Tabs Section -->
-        <div class="col-md-12 col-lg-10">
-          <div class="card shadow">
+        <div class="col-md-12 col-lg-10 ps-0">
+          <div class="card shadow vh-100">
             <div
               class="nav flex-column nav-pills me-3 d-none"
               id="v-pills-tab"
@@ -228,68 +268,60 @@
                 aria-labelledby="v-pills-home-tab"
                 tabindex="0"
               >
-                <section class="py-5 px-2">
-                  <div class="card tab-card p-3">
+                <section class="pb-5 px-2">
+                  <div class="card tab-card p-3 rounded-3">
+                    <div class="row py-3">
+                      <div class="col-6 col-md-8 col-lg-6 align-content-center">
+                        <h3>Lorem Ipsum</h3>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-6">
+                        <div
+                          class="d-flex justify-content-end gap-4 align-content-center"
+                        >
+                          <button class="btn btn-main2 px-4 py-2 border-3">
+                            button
+                          </button>
+                          <p class="px-3">|</p>
+                          <div class="text-center">
+                            <p class="m-0">
+                              <i class="fa-solid fa-rotate"></i>
+                            </p>
+                            <p class="m-0">Refresh</p>
+                          </div>
+                          <div class="text-center">
+                            <p class="m-0">
+                              <i class="fa-solid fa-pen"></i>
+                            </p>
+                            <p class="m-0">Edit</p>
+                          </div>
+                          <div class="text-center">
+                            <p class="m-0">
+                              <i class="fa-solid fa-trash-can"></i>
+                            </p>
+                            <p class="m-0">Delete</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
                     <div class="tab-content scroll" id="pills-tabContent">
                       <table id="example" class="table border custom-border">
                         <thead>
-                          <tr class="custom-row">
-                            <th scope="col first-col">
-                              <div>
-                                <input
-                                  class="form-check-input px-2 py-2"
-                                  type="checkbox"
-                                  id="checkboxNoLabel"
-                                  value=""
-                                  aria-label="..."
-                                />
-                              </div>
-                            </th>
-                            <th scope="col text-start">Sl.No</th>
-                            <th scope="col">Account Roles</th>
-                            <th scope="col">Permissions</th>
-                            <th scope="col">No. of Members</th>
-                            <th scope="col">Action</th>
+                          <tr>
+                            <th scope="col">ID No.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Tags</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr class="custom-row">
-                            <th scope="row">
-                              <div>
-                                <input
-                                  class="form-check-input px-2 py-2"
-                                  type="checkbox"
-                                  id="checkboxNoLabel"
-                                  value=""
-                                  aria-label="..."
-                                />
-                              </div>
-                            </th>
-                            <td>01</td>
-                            <td>Admin</td>
-                            <td>
-                              <button class="btn btn-primary rounded-pill">
-                                <span>Manage</span>
-                              </button>
-                            </td>
-                            <td>00</td>
-
-                            <td>
-                              <div class="action d-flex">
-                                <div class="bin">
-                                  <i
-                                    class="fa-solid fa-trash-can"
-                                    style="color: #667085"
-                                  ></i>
-                                </div>
-                                <div class="edit">
-                                  <i
-                                    class="fa-solid fa-pen"
-                                    style="color: #667085"
-                                  ></i>
-                                </div>
-                              </div>
-                            </td>
+                          <tr>
+                            <td>123456</td>
+                            <td>lorem Ipsum</td>
+                            <td>Loremipsum@email.com</td>
+                            <td>01-01-2024</td>
+                            <td>lorem Ipsum</td>
                           </tr>
                         </tbody>
                       </table>
