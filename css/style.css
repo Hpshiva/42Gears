@@ -48,7 +48,7 @@ table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order {
 }
 .btn-main {
   border-radius: 0% !important;
-  border-bottom: 0.8px solid #01848e !important;
+  border-bottom: 0.8px solid #cbe1e1 !important;
   border-top-left-radius: 6px !important;
   border-bottom-left-radius: 6px !important;
   color: #01848e !important;
@@ -57,7 +57,12 @@ table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order {
 .btn-main2 {
   color: white !important;
   background-color: #47c2bf !important;
-  border: 2px solid #47c2bf !important;
+  border: 2px solid #1a9ba0 !important;
+}
+.btn-main3 {
+  color: #00909a !important;
+  background-color: #e5f3f4 !important;
+  border: 1px solid #badde0 !important;
 }
 .accordion-button:not(.collapsed) {
   background-color: unset !important;
@@ -71,4 +76,15 @@ table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order {
   background-color: #47c2bf !important;
   border-color: #47c2bf !important;
   color: #ffffff !important;
+}
+.btn-main3:nth-child(even) {
+  color: #ff702a !important;
+  background-color: #fff1e6 !important;
+  border: 1px solid #ffd6b7 !important;
+}
+.text-enable {
+  color: #e0e0e0 !important;
+}
+.color-cyan {
+  color: #47c2bf !important;
 }
